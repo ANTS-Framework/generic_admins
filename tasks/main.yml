@@ -1,0 +1,8 @@
+---
+  - name: Adding admin group to sudo
+    lineinfile:
+      dest: /etc/sudoers
+      state: present
+      line: '%{{ generic_admins__groupname}}  ALL=(ALL)       NOPASSWD: ALL'
+    notify:
+    - check sudo syntax
