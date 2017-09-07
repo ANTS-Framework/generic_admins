@@ -1,3 +1,0 @@
----
-  - name: check sudo syntax
-    command: /usr/sbin/visudo -c
